@@ -2,6 +2,7 @@ import { resolve } from 'path';
 import { readdirSync } from 'fs';
 
 const srcPath = resolve(__dirname, '../src');
+
 const getFolders = (srcPath) => {
 	return readdirSync(srcPath, { withFileTypes: true })
 		.filter((dirent) => dirent.isDirectory())

@@ -9,4 +9,16 @@ export default defineConfig({
 			...autoAlias,
 		},
 	},
+	base: './',
+	build: {
+		outDir: './docs',
+		emptyOutDir: true, // also necessary
+	},
+	css: {
+		preprocessorOptions: {
+			scss: {
+				api: 'modern-compiler', // remove deprecated warning
+			},
+		},
+	},
 });
